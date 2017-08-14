@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Airlines";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section head{
+    <script src="~/Shared/Scripts/index.js"></script>
+}
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-lg-4">
+            <input type="radio" id="oneWay" value="0" />
+            <label for="oneWay">
+                One Way
+            </label>
+            <input type="radio" id="withReturn" value="1" />
+            <label for="withReturn">
+                Go and Back
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <input type="text" class="form-control" placeholder="Source" id="source" />
+        </div>
+        <div class="col-lg-4">
+            <input type="text" class="form-control" placeholder="Destiny" id="destiny" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <p>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Boarding" id="boarding" />
+                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                </div>
+            </p>
+        </div>
+        <div class="col-lg-4" id="boxReturn">
+            <p>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Return" id="return" />
+                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                </div>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <input type="checkbox" id="onlyDirect">
+            <label for="onlyDirect">
+                Only direct flyghts
+            </label>
+            <input type="checkbox" id="executive">
+            <label for="executive">
+                Executive class
+            </label>
+        </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <div class="row">
+        <div class="col-lg-1">
+            <label for="adults" class="text-left">
+                Adults
+            </label> <select class="form-control" id="adults"></select>
+        </div>
+        <div class="col-lg-1">
+            <label for="adults" class="text-left">
+                Childs
+            </label> <select class="form-control" id="childs"></select>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-lg-1">
+            <a class="btn btn-lg btn-primary" role="button" id="search">Search Flights</a>
+        </div>
+    </div>
+</div>
+
+<div id="jumbotron">    
+</div>
+
+
